@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no ">
+    <title>BootStrap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="sidenav.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <div class="sidenav-heading">
+            <img src="/Dashboard/logo.svg" alt="">
+        </div>
+        <div class="sidenav-options">
+            <img src="/Dashboard/icon_home.svg" alt="">
+            <a href="#">Home</a>
+        </div>
+        <div class="sidenav-options" style="background-color: #3C3B54; border-left: solid #A3A0FB 5px;">
+            <img src="/Dashboard/icon_dashboard.svg" alt="">
+            <a href="#">Dashboard</a>
+        </div>
+        <div class="sidenav-options" style="border-left: 10px;">
+            <img src="/Dashboard/icon_inbox.svg" alt="">
+            <a href="#">Inbox</a>
+            <span class="new-box">
+                New
+            </span>
+        </div>
+        <div class="sidenav-options">
+            <img src="/Dashboard/icon_products.svg" alt="">
+            <a href="#">Products</a>
+        </div>
+        <div class="sidenav-options">
+            <img src="/Dashboard/icon_admin.svg" alt="">
+            <a href="#">Admin</a>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <span class="d-flex align-items-center">
+
+                        <span onclick="openCloseNav()">
+                            <img src="/images/menu/menu@2x.png" alt="" style="width: 24px; height: 24px;">
+                        </span>
+                        <form class="d-flex align-items-center justify-content-center" role="search">
+                            <button class="btn" type="submit"><img src="/images/icon_search/icon_search@2x.png"
+                                    alt="search-icon" style="width: 24px; height: 24px;">
+                            </button>
+                            <input class="form-control border-0" type="search"
+                                placeholder="Search transactions, invoices or help" aria-label="Search"
+                                style="width: 400px;">
+                        </form>
+                    </span>
+                    <span class="d-flex align-items-center">
+                        <div class="dropdown" style="background-color: white;">
+                            <button class="btn btn-light noti-btn" type="button" data-bs-toggle="dropdown">
+                                <img src="/Dashboard/notification.svg" alt="Notification-Icon">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">
+                                        <div class="profile-noti d-flex">
+                                            <div class="profile-icon"> <img src="/Dashboard/profile-pic-1@2x.png" alt=""
+                                                    style="width: 46px;"></div>
+                                            <div class="profile-details">
+                                                <div class="profile d-inline">
+                                                    <span class="d-flex justify-content-between">
+                                                        <span>David Kames</span>
+                                                        <span class="light-text">2 min ago</span>
+                                                    </span>
+                                                    <span class="light-text">Assigned you on the call with Sara</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <div class="profile-noti d-flex">
+                                            <div class="profile-icon"> <img src="/images/alexa-mary.png" alt=""
+                                                    style="width: 46px;"></div>
+                                            <div class="profile-details">
+                                                <div class="profile d-inline">
+                                                    <span class="d-flex justify-content-between">
+                                                        <span>Alexa Mary</span>
+                                                        <span class="light-text">5 min ago</span>
+                                                    </span>
+                                                    <span class="light-text">Marked the task <span
+                                                            style="color : #3B86FF;">New UI</span> as done</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a></li>
+                                <li><a class="dropdown-item" href="#">
+                                        <div class="profile-noti d-flex">
+                                            <div class="profile-icon"> <img src="/images/eva-maria.png" alt=""
+                                                    style="width: 46px;"></div>
+                                            <div class="profile-details">
+                                                <div class="profile d-inline">
+                                                    <span class="d-flex justify-content-between">
+                                                        <span>David Kames</span>
+                                                        <span class="light-text">10 min ago</span>
+                                                    </span>
+                                                    <span class="light-text">Added a new comment on salestack</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-center" href="#"
+                                        style="color: #3B86FF; margin:17px 0px; height: 100%;">Show More</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">
+                                John Doe
+                                <img src="/Dashboard/small-down.svg" alt="">
+                                <img src="/Dashboard/profile.png" alt="" class="rounded-circle" width="30px">
+                            </button>
+                            <div id="myDropdown" class="dropdown-content ">
+                                <a href="#" style="width: 210px; height: 40px; padding-left: 25px; margin-top: 10px;">
+                                    <img src="/Dashboard/icon-my-profile@2x.png" alt=""
+                                        style="width: 24px; height: 24px; margin-left: 10px; margin-right: 10px; margin-bottom: 3px;">
+                                    My Profile
+                                </a>
+                                <a href="#" style="width: 210px; height: 40px; padding-left: 25px;">
+                                    <img src="/Dashboard/icon-billing@2x.png" alt=""
+                                        style="width: 24px; height: 24px; margin-right: 10px;  margin-left: 10px; margin-bottom: 3px;">
+                                    Billing
+                                </a>
+                                <a href="#" style="width: 210px; height: 40px; padding-left: 25px;">
+                                    <img src="/Dashboard/icon-logout@2x.png" alt=""
+                                        style="width: 24px; height: 24px; margin-right: 10px;  margin-left: 10px; margin-bottom: 3px;">
+                                    Logout
+                                </a>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <div class="overview">
+
+                <span class="d-flex justify-content-between">
+                    <h1 style="font: normal normal 600 28px/40px Source Sans Pro;">
+                        Overview
+                    </h1>
+                    <button type="button" class="btn btn-primary d-flex justify-content-between align-items-center"
+                        style="width: 160px; height: 48px;">Add Funds
+                        <span class="rounded-circle d-flex align-items-center justify-content-center"
+                            style="background-color: #514DDC; width: 22px; height: 22px;">+</span>
+                    </button>
+                </span>
+
+            </div>
+            <div class="row">
+                <div class="col row1">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card1">
+                                <span class="d-flex justify-content-between">
+                                    <p style="font: normal normal normal 18px/13px Source Sans Pro;">Statistics</p>
+                                    <span class="d-flex align-items-center justify-content-between"
+                                        style="font: normal normal normal 14px/20px Source Sans Pro;">
+                                        Last 6 months
+                                        <img src="/Dashboard/small-down.svg" alt="" style="padding-left: 13.5px;">
+                                    </span>
+                                </span>
+                                <div class="line">
+                                    <canvas id="myChart1"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+
+                            <div class="card3">
+                                <p>Sales Distribution</p>
+                                <span class="d-flex justify-content-center align-items-center">
+                                    <div class="donut">
+                                        <canvas id="myChart2"></canvas>
+                                    </div>
+                                </span>
+                                <hr style="color: #F0F4F7; opacity: 1;">
+                                <div class="legend">
+                                    <div class="legend1">
+                                        <div>
+                                            <div class="circle" style="background:#80E2FF;"></div>
+                                            <div style="display: inline-block;margin-left: 10px">France</div>
+                                            <div class="sales" style="display: inline-block;margin-left: 10px;">4260
+                                                Sales</div>
+                                        </div>
+                                        <div>
+                                            <div class="circle" style="background:#F49FA8;"></div>
+                                            <div style="display: inline-block;margin-left: 10px;">Italy</div>
+                                            <div class="sales" style="display: inline-block;margin-left: 10px;">3970
+                                                Sales</div>
+                                        </div>
+                                    </div>
+                                    <div class="legend1">
+                                        <div>
+                                            <div class="circle" style="background:#FFDF94;"></div>
+                                            <div style="display: inline-block;margin-left: 10px;">Japan</div>
+                                            <div class="sales" style="display: inline-block;margin-left: 10px;">4260
+                                                Sales</div>
+                                        </div>
+                                        <div>
+                                            <div class="circle" style="background: #B5B3FB;"></div>
+                                            <div style="display: inline-block;margin-left: 10px">Canada</div>
+                                            <div class="sales" style="display: inline-block;margin-left: 10px;">3970
+                                                Sales</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col">
+                            <div class="card2">
+                                <p
+                                    style="font: normal normal normal 18px/13px Source Sans Pro; letter-spacing: 0px; color: #4D4F5C; opacity: 1; margin-bottom: 19px; margin-top: 18px;">
+                                    Referer</p>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td>Location</td>
+                                            <td>Views</td>
+                                            <td>Sales</td>
+                                            <td>Conversion</td>
+                                            <td>Total</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>google.com</td>
+                                            <td>3746</td>
+                                            <td>752</td>
+                                            <td>43%</td>
+                                            <td>$19,291</td>
+                                        </tr>
+                                        <tr>
+                                            <td>facebook.com</td>
+                                            <td>8126</td>
+                                            <td>728</td>
+                                            <td>32%</td>
+                                            <td>$17,638</td>
+                                        </tr>
+                                        <tr>
+                                            <td>twitter.com</td>
+                                            <td>8836</td>
+                                            <td>694</td>
+                                            <td>28%</td>
+                                            <td>$16,218</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Direct,email,IM</td>
+                                            <td>1173</td>
+                                            <td>645</td>
+                                            <td>24%</td>
+                                            <td>$14,241</td>
+                                        </tr>
+                                        <tr>
+                                            <td>linkedin.com</td>
+                                            <td>2739</td>
+                                            <td>539</td>
+                                            <td>20%</td>
+                                            <td>$12,370</td>
+                                        </tr>
+                                        <tr>
+                                            <td>instagram.com</td>
+                                            <td>2739</td>
+                                            <td>539</td>
+                                            <td>20%</td>
+                                            <td>$12,370</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#">Show More</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card4">
+                                <div class="text-center">
+                                    <img src="/images/profile/profile-pic-01.jpg" alt="profile-pic-01"
+                                        class="rounded-circle" style="width: 96px; height: 96px;">
+                                    <p
+                                        style="font-size: 18px; margin: 20px 0px 7px 0px; font: normal normal 600 18px/13px Source Sans Pro;">
+                                        Nick Herasimenka</p>
+                                    <p
+                                        style="margin: 0px 0px 17px 0xp; font: normal normal normal 14px/25px Source Sans Pro; color: #43425D;opacity: 0.5;">
+                                        United States</p>
+                                    <span class="icon-box text-center">
+                                        <img src="/Dashboard/twitter.svg" alt="">
+                                        <img src="/Dashboard/facebook.svg" alt="">
+                                        <img src="/Dashboard/linkedin.svg" alt="">
+                                        <img src="/Dashboard/whatsapp.svg" alt="">
+                                    </span>
+
+                                </div>
+                                <hr style="color: #F0F4F7; opacity: 1; margin-top: 22.5px; margin-bottom: 33.5px;">
+                                <span class="d-flex justify-content-between" style="margin-bottom: 30px;">
+                                    <span style="font-size: 18px;">Our Users</span>
+                                    <a href="#"><img src="/images/options/options.png" alt=""></a>
+                                </span>
+                                <div class="profile-box d-flex">
+                                    <div class="profile-pic">
+                                        <img src="/Dashboard/profile-pic@2x.png" alt="" class="rounded-circle"
+                                            style="width: 50px; height: 50px;">
+                                    </div>
+                                    <div class="profile-detail d-inline">
+                                        <div class="profile-name">
+                                            Drew James
+                                        </div>
+                                        <div class="place-mob d-flex justify-content-between light-text">
+                                            <span>
+                                                United States
+                                            </span>
+                                            <span>
+                                                Mobile : 8715674877
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="profile-box d-flex">
+                                    <div class="profile-pic">
+                                        <img src="/Dashboard/profile-pic-1@2x.png" alt="" class="rounded-circle"
+                                            style="width: 50px; height: 50px;">
+                                    </div>
+                                    <div class="profile-detail d-inline">
+                                        <div class="profile-name">
+                                            Bavid Kames
+                                        </div>
+                                        <div class="place-mob d-flex justify-content-between light-text">
+                                            <span>
+                                                United States
+                                            </span>
+                                            <span>
+                                                Mobile : 8715674877
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="profile-box d-flex">
+                                    <div class="profile-pic">
+                                        <img src="/Dashboard/profile-pic-2@2x.png" alt="" class="rounded-circle"
+                                            style="width: 50px; height: 50px;">
+                                    </div>
+                                    <div class="profile-detail d-inline">
+                                        <div class="profile-name">
+                                            Lavid Emes
+                                        </div>
+                                        <div class="place-mob d-flex justify-content-between light-text">
+                                            <span>
+                                                United States
+                                            </span>
+                                            <span>
+                                                Mobile : 8715674877
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card5">
+                                <span class="d-flex justify-content-between" style="margin-bottom: 29px;">
+                                    <span>Product Video</span>
+                                    <a href="#"><img src="/images/options/options.png" alt="Options-Icon"></a>
+                                </span>
+                                <div class="player">
+                                    <iframe width="536px" height="248px" border-radius="6px"
+                                        src="https://www.youtube.com/embed/Oy6hk6Y7VHQ" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="sidenav.js"></script>
+        <script src="newchart.js"></script>
+    </div>
+
+
+</body>
+
+</html>
